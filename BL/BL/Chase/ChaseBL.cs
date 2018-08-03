@@ -12,9 +12,9 @@
     {
 		public ChaseBL() { }
 
-		public IList<IEnumerable<ExpensesDTO>> GetExpenses(IList<IEnumerable<ExpensesDTO>> files)
+		public List<IEnumerable<ExpensesDTO>> GetExpenses(List<IEnumerable<ExpensesDTO>> files)
 		{
-			IList<IEnumerable<ExpensesDTO>> result = null;
+			List<IEnumerable<ExpensesDTO>> result = new List<IEnumerable<ExpensesDTO>>();
 			foreach (var file in files)
 			{
 				var singleResult = file
@@ -34,9 +34,9 @@
 			return result;
 		}
 
-		public IList<IEnumerable<ExpensesDTO.ExpensesSummaryDTO>> GetExpensesSummaries(IList<IEnumerable<ExpensesDTO>> files)
+		public List<IEnumerable<ExpensesDTO.ExpensesSummaryDTO>> GetExpensesSummaries(List<IEnumerable<ExpensesDTO>> files)
 		{
-			IList<IEnumerable<ExpensesDTO.ExpensesSummaryDTO>> result = null;
+			List<IEnumerable<ExpensesDTO.ExpensesSummaryDTO>> result = new List<IEnumerable<ExpensesDTO.ExpensesSummaryDTO>>();
 			foreach (var file in files)
 			{
 				var singleResult = file

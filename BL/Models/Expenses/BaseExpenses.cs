@@ -3,6 +3,8 @@
 	using System;
 	using System.Collections.Generic;
 	using System.IO;
+	using System.Linq;
+	using System.Text.RegularExpressions;
 	using CsvHelper;
 
 	public abstract class BaseExpenses
@@ -15,13 +17,13 @@
 
 		public virtual string Category { get; set; }
 
-		public DateTime TransDate { get; set; }
+		public virtual DateTime TransDate { get; set; }
 
-		public string Description { get; set; }
+		public virtual string Description { get; set; }
 
-		public float Amount { get; set; }
+		public virtual float Amount { get; set; }
 
-		public static void PrintExpenses<T>(IList<IEnumerable<T>> data)
+		public static void PrintExpenses<T>(List<IEnumerable<T>> data)
 		{
 
 			foreach (var d in data)
@@ -38,35 +40,36 @@
 			}
 			if (bank.ToLower() == "chase")
 			{
-				IList<IEnumerable<Chase.ExpensesDTO>> allValues = null;
+				List<IEnumerable<Chase.ExpensesDTO>> allValues = new List<IEnumerable<Chase.ExpensesDTO>>();
 				foreach (var file in files)
 				{
 					using (TextReader fileReader = File.OpenText(file))
 					{
 						var csv = new CsvReader(fileReader);
 						csv.Configuration.HasHeaderRecord = true;
-						csv.Configuration.IgnoreQuotes = true;
-						var record = csv.GetRecords<Chase.ExpensesDTO>();
+						csv.Configuration.PrepareHeaderForMatch = header => Regex.Replace(header, @"\s", string.Empty);
+						var record = csv.GetRecords<Chase.ExpensesDTO>().ToList();
 						allValues.Add(record);
 					}
 				}
 
-				return (IList<T>)(object)allValues;
+				return (IList<T>)allValues;
 			}
 			else
 			{
-				IList<IEnumerable<WellsFargo.ExpensesDTO>> allValues = null;
+				List<IEnumerable<WellsFargo.ExpensesDTO>> allValues = new List<IEnumerable<WellsFargo.ExpensesDTO>>();
 				foreach (var file in files)
 				{
 					using (TextReader fileReader = File.OpenText(file))
 					{
 						var csv = new CsvReader(fileReader);
 						csv.Configuration.HasHeaderRecord = false;
-						csv.Configuration.IgnoreQuotes = true;
-						allValues.Add(csv.GetRecords<WellsFargo.ExpensesDTO>());
+						csv.Configuration.PrepareHeaderForMatch = header => Regex.Replace(header, @"\s", string.Empty);
+						var record = csv.GetRecords<WellsFargo.ExpensesDTO>().ToList();
+						allValues.Add(record);
 					}
 				}
-				return (IList<T>)(object)allValues;
+				return (IList<T>)allValues;
 			}
 
 		}

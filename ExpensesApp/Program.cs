@@ -70,8 +70,8 @@
 			var chaseFiles = FileProcessor.RetrieveFilesPerBank(files, CHASE);
 			var wellsFiles = FileProcessor.RetrieveFilesPerBank(files, WELLSFARGO);
 
-			var chase = BaseExpenses.ReadInCSV<IEnumerable<BL.Models.Expenses.Chase.ExpensesDTO>>(chaseFiles, CHASE);
-			var wells = BaseExpenses.ReadInCSV<IEnumerable<BL.Models.Expenses.WellsFargo.ExpensesDTO>>(wellsFiles, WELLSFARGO);
+			List<IEnumerable<BL.Models.Expenses.Chase.ExpensesDTO>> chase = (List<IEnumerable<BL.Models.Expenses.Chase.ExpensesDTO>>)BaseExpenses.ReadInCSV<IEnumerable<BL.Models.Expenses.Chase.ExpensesDTO>>(chaseFiles, CHASE);
+			List<IEnumerable<BL.Models.Expenses.WellsFargo.ExpensesDTO>> wells = (List<IEnumerable<BL.Models.Expenses.WellsFargo.ExpensesDTO>>)BaseExpenses.ReadInCSV<IEnumerable<BL.Models.Expenses.WellsFargo.ExpensesDTO>>(wellsFiles, WELLSFARGO);
 
 			ChaseBL chaseBL = new ChaseBL();
 			var mainChaseReport = chaseBL.GetExpenses(chase);
