@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ExpensesApp": {
+      "commandName": "Project",
+      "commandLineArgs": "-base"
+    }
+  }
+}

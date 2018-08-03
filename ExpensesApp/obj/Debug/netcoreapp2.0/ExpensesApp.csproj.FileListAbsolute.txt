@@ -1,0 +1,16 @@
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\bin\Debug\netcoreapp2.0\BL.dll
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\obj\Debug\netcoreapp2.0\ExpensesApp.csprojResolveAssemblyReference.cache
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\obj\Debug\netcoreapp2.0\ExpensesApp.csproj.CoreCompileInputs.cache
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\obj\Debug\netcoreapp2.0\ExpensesApp.AssemblyInfoInputs.cache
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\obj\Debug\netcoreapp2.0\ExpensesApp.AssemblyInfo.cs
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\bin\Debug\netcoreapp2.0\ExpensesApp.deps.json
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\bin\Debug\netcoreapp2.0\ExpensesApp.runtimeconfig.json
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\bin\Debug\netcoreapp2.0\ExpensesApp.runtimeconfig.dev.json
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\bin\Debug\netcoreapp2.0\ExpensesApp.dll
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\bin\Debug\netcoreapp2.0\ExpensesApp.pdb
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\bin\Debug\netcoreapp2.0\Common.dll
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\bin\Debug\netcoreapp2.0\BL.pdb
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\bin\Debug\netcoreapp2.0\Common.pdb
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\obj\Debug\netcoreapp2.0\ExpensesApp.csproj.CopyComplete
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\obj\Debug\netcoreapp2.0\ExpensesApp.dll
+C:\Users\ignacio.rosas\source\repos\ExpensesApp\ExpensesApp\obj\Debug\netcoreapp2.0\ExpensesApp.pdb
