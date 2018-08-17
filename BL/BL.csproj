@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DL\" />
+    <Compile Remove="DL\**" />
+    <EmbeddedResource Remove="DL\**" />
+    <None Remove="DL\**" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,12 +1,12 @@
-﻿namespace BL.Models.Expenses.Chase
+﻿namespace BL.Models.Chase
 {
 	using System;
 	using System.Collections.Generic;
 	using System.Text;
 
-	public class ExpensesDTO : BaseExpenses
+	public class ChaseDTO : BaseExpenses
 	{
-		public ExpensesDTO() : base() { }
+		public ChaseDTO() : base() { }
 
 		public string Type { get; set; }
 
@@ -16,7 +16,7 @@
 
 		public override string Description { get => base.Description; set => base.Description = value; }
 
-		public override float Amount { get => base.Amount; set => base.Amount = value; }
+		public override decimal Amount { get => base.Amount; set => base.Amount = value; }
 
 		public override string Category { get => base.Category; set => base.Category = value; }
 
@@ -24,13 +24,13 @@
 
 
 
-		public class ExpensesSummaryDTO : ExpensesDTO
-		{
-			public ExpensesSummaryDTO() : base() { }
+		public class ChaseSummaryDTO : ChaseDTO
+        {
+			public ChaseSummaryDTO() : base() { }
 
 			public override string Category { get => base.Category; set => base.Category = value; }
 
-			public float Total { get; set; }
+			public decimal Total { get; set; }
 		}
 	}
 }

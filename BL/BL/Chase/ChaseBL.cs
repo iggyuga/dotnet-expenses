@@ -36,8 +36,9 @@
 
 		public List<IEnumerable<ExpensesDTO.ExpensesSummaryDTO>> GetExpensesSummaries(List<IEnumerable<ExpensesDTO>> files)
 		{
-			List<IEnumerable<ExpensesDTO.ExpensesSummaryDTO>> result = new List<IEnumerable<ExpensesDTO.ExpensesSummaryDTO>>();
-			foreach (var file in files)
+            List<IEnumerable<ExpensesDTO.ExpensesSummaryDTO>> result = new List<IEnumerable<ExpensesDTO.ExpensesSummaryDTO>>();
+
+            foreach (var file in files)
 			{
 				var singleResult = file
 									.Where(d => d.Category.In(BaseExpenses.CATEGORIES))
@@ -53,5 +54,11 @@
 
 			return result;
 		}
+
+
+
+
+
+
     }
 }

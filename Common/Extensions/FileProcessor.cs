@@ -19,9 +19,10 @@
 				try
 				{
 					processedFiles = ProcessFiles(Directory.GetFiles(path));
-				} catch (Exception e)
+				}
+                catch (Exception e)
 				{
-					Console.WriteLine("{0} Exception caught.", e);
+					Console.WriteLine("{0} Error processing files", e);
 				}
 			}
 			// Must be a single file
@@ -33,7 +34,7 @@
 				}
 				catch (Exception e)
 				{
-					Console.WriteLine("{0} Exception caught.", e);
+					Console.WriteLine("{0} Error processing files", e);
 				}
 			}
 			return processedFiles;

@@ -1,4 +1,4 @@
-﻿namespace BL.Models.Expenses
+﻿namespace BL.Models
 {
 	using System;
 	using System.Collections.Generic;
@@ -21,18 +21,18 @@
 
 		public virtual string Description { get; set; }
 
-		public virtual float Amount { get; set; }
+		public virtual decimal Amount { get; set; }
 
 		public static void PrintExpenses<T>(List<IEnumerable<T>> data)
 		{
-
 			foreach (var d in data)
 			{
 				Console.WriteLine(d);
 			}
 		}
 
-		public static IList<T> ReadInCSV<T>(string[] files, string bank)
+        // TODO: Fix this, refactor/remove generics?
+        public static IList<T> ReadInCSV<T>(string[] files, string bank)
 		{
 			if (string.IsNullOrEmpty(bank) || files == null)
 			{
@@ -40,7 +40,7 @@
 			}
 			if (bank.ToLower() == "chase")
 			{
-				List<IEnumerable<Chase.ExpensesDTO>> allValues = new List<IEnumerable<Chase.ExpensesDTO>>();
+				List<IEnumerable<ChaseDTO>> allValues = new List<IEnumerable<Chase.ExpensesDTO>>();
 				foreach (var file in files)
 				{
 					using (TextReader fileReader = File.OpenText(file))

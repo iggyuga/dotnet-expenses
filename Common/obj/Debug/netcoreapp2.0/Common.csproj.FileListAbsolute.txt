@@ -7,3 +7,12 @@ C:\Users\ignacio.rosas\source\repos\ExpensesApp\Common\obj\Debug\netcoreapp2.0\C
 C:\Users\ignacio.rosas\source\repos\ExpensesApp\Common\bin\Debug\netcoreapp2.0\Common.pdb
 C:\Users\ignacio.rosas\source\repos\ExpensesApp\Common\obj\Debug\netcoreapp2.0\Common.dll
 C:\Users\ignacio.rosas\source\repos\ExpensesApp\Common\obj\Debug\netcoreapp2.0\Common.pdb
+C:\Users\iggy\source\repos\ExpensesApp\Common\bin\Debug\netcoreapp2.0\Common.deps.json
+C:\Users\iggy\source\repos\ExpensesApp\Common\bin\Debug\netcoreapp2.0\Common.dll
+C:\Users\iggy\source\repos\ExpensesApp\Common\bin\Debug\netcoreapp2.0\Common.pdb
+C:\Users\iggy\source\repos\ExpensesApp\Common\obj\Debug\netcoreapp2.0\Common.csprojAssemblyReference.cache
+C:\Users\iggy\source\repos\ExpensesApp\Common\obj\Debug\netcoreapp2.0\Common.csproj.CoreCompileInputs.cache
+C:\Users\iggy\source\repos\ExpensesApp\Common\obj\Debug\netcoreapp2.0\Common.AssemblyInfoInputs.cache
+C:\Users\iggy\source\repos\ExpensesApp\Common\obj\Debug\netcoreapp2.0\Common.AssemblyInfo.cs
+C:\Users\iggy\source\repos\ExpensesApp\Common\obj\Debug\netcoreapp2.0\Common.dll
+C:\Users\iggy\source\repos\ExpensesApp\Common\obj\Debug\netcoreapp2.0\Common.pdb

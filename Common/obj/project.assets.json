@@ -835,23 +835,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ignacio.rosas\\.nuget\\packages\\": {},
+    "C:\\Users\\iggy\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ignacio.rosas\\source\\repos\\ExpensesApp\\Common\\Common.csproj",
+      "projectUniqueName": "C:\\Users\\iggy\\source\\repos\\ExpensesApp\\Common\\Common.csproj",
       "projectName": "Common",
-      "projectPath": "C:\\Users\\ignacio.rosas\\source\\repos\\ExpensesApp\\Common\\Common.csproj",
-      "packagesPath": "C:\\Users\\ignacio.rosas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ignacio.rosas\\source\\repos\\ExpensesApp\\Common\\obj\\",
+      "projectPath": "C:\\Users\\iggy\\source\\repos\\ExpensesApp\\Common\\Common.csproj",
+      "packagesPath": "C:\\Users\\iggy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\iggy\\source\\repos\\ExpensesApp\\Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ignacio.rosas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\iggy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

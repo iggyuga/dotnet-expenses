@@ -10,3 +10,15 @@ C:\Users\ignacio.rosas\source\repos\ExpensesApp\BL\obj\Debug\netcoreapp2.0\BL.pd
 C:\Users\ignacio.rosas\source\repos\ExpensesApp\BL\bin\Debug\netcoreapp2.0\Common.dll
 C:\Users\ignacio.rosas\source\repos\ExpensesApp\BL\bin\Debug\netcoreapp2.0\Common.pdb
 C:\Users\ignacio.rosas\source\repos\ExpensesApp\BL\obj\Debug\netcoreapp2.0\BL.csproj.CopyComplete
+C:\Users\iggy\source\repos\ExpensesApp\BL\obj\Debug\netcoreapp2.0\BL.csprojAssemblyReference.cache
+C:\Users\iggy\source\repos\ExpensesApp\BL\obj\Debug\netcoreapp2.0\BL.csproj.CoreCompileInputs.cache
+C:\Users\iggy\source\repos\ExpensesApp\BL\obj\Debug\netcoreapp2.0\BL.AssemblyInfoInputs.cache
+C:\Users\iggy\source\repos\ExpensesApp\BL\obj\Debug\netcoreapp2.0\BL.AssemblyInfo.cs
+C:\Users\iggy\source\repos\ExpensesApp\BL\obj\Debug\netcoreapp2.0\BL.dll
+C:\Users\iggy\source\repos\ExpensesApp\BL\obj\Debug\netcoreapp2.0\BL.pdb
+C:\Users\iggy\source\repos\ExpensesApp\BL\bin\Debug\netcoreapp2.0\BL.deps.json
+C:\Users\iggy\source\repos\ExpensesApp\BL\bin\Debug\netcoreapp2.0\BL.dll
+C:\Users\iggy\source\repos\ExpensesApp\BL\bin\Debug\netcoreapp2.0\BL.pdb
+C:\Users\iggy\source\repos\ExpensesApp\BL\bin\Debug\netcoreapp2.0\Common.dll
+C:\Users\iggy\source\repos\ExpensesApp\BL\bin\Debug\netcoreapp2.0\Common.pdb
+C:\Users\iggy\source\repos\ExpensesApp\BL\obj\Debug\netcoreapp2.0\BL.csproj.CopyComplete

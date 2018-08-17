@@ -7,29 +7,48 @@
 	using System.Linq;
 	using Common.Extensions;
 	using BL.BL;
-	using BL.Models.Expenses;
-	using System.Threading;
+    //using BL.Models.Expenses.Chase;
+   // using BL.Models.Expenses.WellsFargo;
+    using System.Threading;
+    using BL.Models;
 
-	public class Program
+    public class Program
 	{
 		// First we want to locate the directory where the files are kept, we can either get it from input or use a hardcoded version
+        // 
 		static string BASE_PATH = @"C:\Users\ignacio.rosas\Documents\banking";
 
 		const string CHASE = "Chase";
 		const string WELLSFARGO = "WellsFargo";
+        const string BOA = "BankOfAmerica";
+        const string REGIONS = "Regions";
 
 		private static void _Help()
 		{
-			Console.WriteLine("Console arguments: -p \"<pathname>\"\n To use default pathing use: -base");
-		}
+            Console.WriteLine("Console arguments:");
+            Console.WriteLine("-base            | Use the hardcoded path");
+            Console.WriteLine("-p <path>        | Pass in the directory or file path, this will use all the banks available in the application");
+            Console.WriteLine("-p <path> <bank> | Pass in the directory or file path of a specified bank");
+            Console.WriteLine("-b list          | Prints the list of banks available");
+        }
 
-		private static void StartMenu(string[] args)
+        private static void _Banks()
+        {
+            Console.WriteLine("Here is the list of banks available for calculating expenses:");
+            Console.WriteLine($"{CHASE}, {WELLSFARGO}, {BOA}, {REGIONS}");
+        }
+
+        private static void StartMenu(string[] args)
 		{
 			while (!args[0].StartsWith("-") || args[0].ToLower() == "h" || args[0].ToLower() == "help")
 			{
 				_Help();
 				string[] input = Console.ReadLine().Split(' ');
-				if (args.Length > 2 || args.Length < 1) { StartMenu(args); }
+				if (args.Length > 3 || args.Length < 1)
+                {
+                    StartMenu(args);
+                }
+                //TODO add in case for list of banks
 				for (int i = 0; i < input.Length; i++)
 				{
 					args[i] = input[i];
@@ -39,7 +58,7 @@
 
 		public static void Main(string[] args)
 		{
-			Console.WriteLine("Welcome to the Expense calulator");
+			Console.WriteLine("Welcome to the Expense calculator");
 			Thread.Sleep(1000);
 
 			StartMenu(args);
@@ -49,7 +68,7 @@
 				switch(args[0].ToLower())
 				{
 					case "-p":
-						Run(args, BASE_PATH);
+						Run(args);
 						break;
 					case "-base":
 						Run(args, BASE_PATH);
@@ -63,15 +82,16 @@
 
 		}
 
-		private static void Run(string[] args, string bASE_PATH)
+		private static void Run(string[] args, string bASE_PATH = "")
 		{
 			SetPath(args);
 			NameValueCollection files = FileWorker(bASE_PATH);
 			var chaseFiles = FileProcessor.RetrieveFilesPerBank(files, CHASE);
 			var wellsFiles = FileProcessor.RetrieveFilesPerBank(files, WELLSFARGO);
 
-			List<IEnumerable<BL.Models.Expenses.Chase.ExpensesDTO>> chase = (List<IEnumerable<BL.Models.Expenses.Chase.ExpensesDTO>>)BaseExpenses.ReadInCSV<IEnumerable<BL.Models.Expenses.Chase.ExpensesDTO>>(chaseFiles, CHASE);
-			List<IEnumerable<BL.Models.Expenses.WellsFargo.ExpensesDTO>> wells = (List<IEnumerable<BL.Models.Expenses.WellsFargo.ExpensesDTO>>)BaseExpenses.ReadInCSV<IEnumerable<BL.Models.Expenses.WellsFargo.ExpensesDTO>>(wellsFiles, WELLSFARGO);
+            // TODO: Fix all this shit, class references are wrong
+			List<IEnumerable<Chase.ChaseDTO>> chase = (List<IEnumerable<BL.Models.Expenses.Chase.ExpensesDTO>>)BaseExpenses.ReadInCSV<IEnumerable<BL.Models.Expenses.Chase.ExpensesDTO>>(chaseFiles, CHASE);
+			List<IEnumerable<BL.Models.WellsFargoDTO>> wells = (List<IEnumerable<BL.Models.Expenses.WellsFargo.WellsFargoDTO>>)BaseExpenses.ReadInCSV<IEnumerable<BL.Models.Expenses.WellsFargo.WellsFargoDTO>>(wellsFiles, WELLSFARGO);
 
 			ChaseBL chaseBL = new ChaseBL();
 			var mainChaseReport = chaseBL.GetExpenses(chase);
@@ -96,10 +116,22 @@
 
 		private static void SetPath(string[] args = null)
 		{
-			if (args.Length == 1) { return; }
-			else if (args.Length == 2) { BASE_PATH = args[1]; }
-			else { throw new Exception("You entered an invalid number of arguments"); }
+			if (args.Length == 1)
+            {
+                return;
+            }
+			else if (args.Length == 2)
+            {
+                BASE_PATH = args[1];
+            }
+			else
+            {
+                throw new Exception("You entered an invalid number of arguments");
+            }
 		}
+
+
+        private static void 
 
 	}
 }

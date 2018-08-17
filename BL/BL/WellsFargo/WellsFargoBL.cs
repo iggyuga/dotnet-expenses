@@ -14,14 +14,14 @@
 		public WellsFargoBL() { }
 
 
-		public List<IEnumerable<ExpensesDTO>> GetExpenses(List<IEnumerable<ExpensesDTO>> files)
+		public List<IEnumerable<WellsFargoDTO>> GetExpenses(List<IEnumerable<WellsFargoDTO>> files)
 		{
-			List<IEnumerable<ExpensesDTO>> result = new List<IEnumerable<ExpensesDTO>>();
+			List<IEnumerable<WellsFargoDTO>> result = new List<IEnumerable<WellsFargoDTO>>();
 			foreach (var file in files)
 			{
 				var singleResult = file
 									.Where(d => d.Description.Contains(BaseExpenses.MARKETS, StringComparison.OrdinalIgnoreCase))
-									.Select(d => new ExpensesDTO
+									.Select(d => new WellsFargoDTO
 									{
 										Amount = d.Amount,
 										Category = d.Category,
@@ -35,15 +35,15 @@
 			return result;
 		}
 
-		public List<IEnumerable<ExpensesDTO.ExpensesSummaryDTO>> GetExpensesSummaries(List<IEnumerable<ExpensesDTO>> files)
+		public List<IEnumerable<WellsFargoDTO.ExpensesSummaryDTO>> GetExpensesSummaries(List<IEnumerable<WellsFargoDTO>> files)
 		{
-			List<IEnumerable<ExpensesDTO.ExpensesSummaryDTO>> result = new List<IEnumerable<ExpensesDTO.ExpensesSummaryDTO>>();
+			List<IEnumerable<WellsFargoDTO.ExpensesSummaryDTO>> result = new List<IEnumerable<WellsFargoDTO.ExpensesSummaryDTO>>();
 			foreach (var file in files)
 			{
 				var singleResult = file
 									.Where(d => d.Description.Contains(BaseExpenses.MARKETS, StringComparison.OrdinalIgnoreCase))
 									.GroupBy(d => new { Category = d.Category })
-									.Select(d => new ExpensesDTO.ExpensesSummaryDTO
+									.Select(d => new WellsFargoDTO.ExpensesSummaryDTO
 									{
 										Category = d.Key.Category,
 										Total = d.Sum(g => g.Amount)
